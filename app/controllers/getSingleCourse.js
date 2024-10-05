@@ -1,7 +1,7 @@
 export default async function getSingleCourse(id){
 
     try {
-        const response = await fetch(`https://clancy-mongodb-crud.netlify.app/api/courses/${id}`,{cache:"no-store"});
+        const response = await fetch(`http://http://localhost:3000/api/courses/${id}`,{cache:"no-store"});
         const course = await response.json();
         return course.data; 
     } catch (error) {

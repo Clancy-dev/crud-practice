@@ -12,7 +12,7 @@ export default function EditForm({course}) {
         newDescription
     };    
     
-    const response = await fetch(`https://clancy-mongodb-crud.netlify.app/api/courses/${course._id}`,{
+    const response = await fetch(`http://http://localhost:3000/api/courses/${course._id}`,{
         method:"PUT",
         headers:{
             'Content-Type':"application/json"

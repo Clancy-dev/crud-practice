@@ -16,7 +16,7 @@ export default function AddCourse() {
             description
         };    
         //console.log(newCourse)
-        const response = await fetch("https://clancy-mongodb-crud.netlify.app/api/courses",{
+        const response = await fetch("http://http://localhost:3000/api/courses",{
             method:"POST",
             headers:{
                 'Content-Type':"application/json"
