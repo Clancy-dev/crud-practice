@@ -7,7 +7,7 @@ import DeleteBtn from "./DeleteBtn";
 export default async function CoursesList() {
   //bring in our controller
   const courses = await getCourses();
-
+   console.log(courses)
 
   return (
     <div className="courses-list">

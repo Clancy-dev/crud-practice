@@ -16,7 +16,8 @@ export default function AddCourse() {
             description
         };    
         //console.log(newCourse)
-        const response = await fetch("http://localhost:3000/api/courses",{
+        const api_url=process.env.NEXT_PUBLIC_BASE_URL
+        const response = await fetch(`${api_url}/api/courses`,{
             method:"POST",
             headers:{
                 'Content-Type':"application/json"

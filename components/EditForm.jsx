@@ -11,8 +11,8 @@ export default function EditForm({course}) {
         newTitle,
         newDescription
     };    
-    
-    const response = await fetch(`http://localhost:3000/api/courses/${course._id}`,{
+    const api_url=process.env.NEXT_PUBLIC_BASE_URL  
+    const response = await fetch(`${api_url}/api/courses/${course._id}`,{
         method:"PUT",
         headers:{
             'Content-Type':"application/json"
