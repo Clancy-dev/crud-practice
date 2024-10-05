@@ -9,7 +9,7 @@ export default function DeleteBtn({id}) {
   async function handleDeleteCourse(){ 
     const confirmed = confirm("Are you sure?");
     if(confirmed){
-      await fetch(`http://localhost:3000/api/courses?id=${id}`,{
+      await fetch(`https://clancy-mongodb-crud.netlify.app/courses?id=${id}`,{
         method:"DELETE"   
       });
       router.refresh()
