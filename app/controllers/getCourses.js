@@ -9,8 +9,8 @@ export default async function getCourses(){
         const response = await fetch(`${api_url}/api/courses`,{cache:"no-store",});
         // const response = await fetch("http://localhost:3000/api/courses",{cache:"no-store",});
         const courses = await response.json();
-        revalidatePath("/")
-        console.log(courses.data)
+        // revalidatePath("/")
+        
         return courses.data;
     } catch (error) {
         console.log(error)

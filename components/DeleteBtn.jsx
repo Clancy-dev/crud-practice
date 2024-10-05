@@ -5,13 +5,14 @@ import { MdOutlineDelete } from "react-icons/md";
 
 export default function DeleteBtn({id}) {
   const router = useRouter();
+  const api_url=process.env.NEXT_PUBLIC_BASE_URL
  
   //function for deleting    
   async function handleDeleteCourse(){ 
-    const api_url=process.env.NEXT_PUBLIC_BASE_URL
-    const confirmed = confirm("Are you sure?");
+    
+    const confirmed = confirm("Are you sure you want to delete this course?");
     if(confirmed){
-      await fetch(`${api_url}/courses?id=${id}`,{
+      await fetch(`${api_url}/api/courses?id=${id}`,{
         method:"DELETE"   
       });
       router.refresh()
